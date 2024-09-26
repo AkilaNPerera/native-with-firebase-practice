@@ -62,7 +62,9 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <KeyboardAvoidingView behavior="padding"> {/* Keyboard will not hover over the login and signup fields */}
+      <KeyboardAvoidingView behavior="padding">
+        {" "}
+        {/* Keyboard will not hover over the login and signup fields */}
         <TextInput
           value={email}
           style={styles.input}
@@ -82,8 +84,12 @@ const Login = () => {
           <ActivityIndicator size="large" color="#0000ff" />
         ) : (
           <>
-            <Button title="Login" onPress={signIn}></Button>
-            <Button title="Register" onPress={signUp}></Button>
+            <View style={{ marginTop: 10 }}>
+              <Button title="Login" onPress={signIn} />
+            </View>
+            <View style={{ marginTop: 10 }}>
+              <Button title="Register" onPress={signUp} />
+            </View>
           </>
         )}
       </KeyboardAvoidingView>
